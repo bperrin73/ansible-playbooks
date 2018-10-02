@@ -4,20 +4,20 @@
 
   tasks:
     - name: Dump Date and Service Status
-      shell: date >> testing.out ; ps -ef |grep OoklaServer >> /tmp/testing.out
+      shell: date ; ps -ef |grep OoklaServer 
 
     - name: Change to the OoklaServer working directory and stop service.
-      shell: ./ooklaserver.sh stop >> /tmp/testing.out
+      shell: ./ooklaserver.sh stop 
       args:
         chdir: /opt/ookla/Netgauge-Server-2.6/Linux-x86_64/
 
     - name: Echo Shutdown to Log.
-      shell: echo "Service Terminated" >> /tmp/testing.out
+      shell: echo "Service Terminated" 
 
     - name: Change to the OoklaServer working directory and start service.
-      shell: ./ooklaserver.sh start >> /tmp/testing.out
+      shell: ./ooklaserver.sh start 
       args:
         chdir: /opt/ookla/Netgauge-Server-2.6/Linux-x86_64/
 
     - name: Echo Start to Log.
-      shell: echo "Service Started" >> /tmp/testing.out
+      shell: echo "Service Started" 
