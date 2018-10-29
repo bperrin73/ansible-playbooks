@@ -1,4 +1,4 @@
-- hosts: 172.20.0.28
+- hosts: All
   gather_facts: yes
 
   tasks:
