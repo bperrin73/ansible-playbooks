@@ -1,5 +1,4 @@
 ---
-- hosts: speedtest
   gather_facts: yes
 
   tasks:
