@@ -1,6 +1,4 @@
 ---
-  gather_facts: yes
-
   tasks:
     - name: Dump Date and Service Status
       shell: date ; ps -ef |grep OoklaServer 
