@@ -1,4 +1,4 @@
-- hosts: atlanta
+- hosts: dukespapp01
   gather_facts: yes
 
   tasks:
