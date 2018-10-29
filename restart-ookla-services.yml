@@ -15,7 +15,7 @@
     - name: Change to the OoklaServer working directory and start service.
       shell: ./ooklaserver.sh start 
       args:
-        chdir: /opt/ookla/Netgauge-Server-2.6/Linux-x86_64/
+        chdir: /opt/ookla/Netgauge-Server-2.6.6/Linux-x86_64/
 
     - name: Echo Start to Log.
       shell: echo "Service Started" 
