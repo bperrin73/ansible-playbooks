@@ -1,4 +1,4 @@
-- hosts: dukespapp01
+- hosts: 172.20.0.28
   gather_facts: yes
 
   tasks:
