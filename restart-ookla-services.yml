@@ -1,4 +1,4 @@
-- hosts: All
+- hosts: dukespapp01
  
   tasks:
     - name: Dump Date and Service Status
