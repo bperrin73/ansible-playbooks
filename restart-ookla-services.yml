@@ -3,14 +3,11 @@
   tasks:
     - name: Dump Date and Service Status
       shell: /bin/date >> /tmp/asr.log
-      shell: ps -ef | grep OoklaServer >> /tmp/asr.log
-
+      
     - name: Change to the OoklaServer working directory and restart service.
       shell: ./ooklaserver.sh restart 
       args:
         chdir: /opt/ookla/server
 
     - name: Echo Re-Start to Log.
-      shell: /bin/date >> /tmp/asr.log 
-      shell: ps -ef | grep OoklaServer >> /tmp/asr.log
       shell: echo "Ookla Service Started" >> /tmp/asr.log
