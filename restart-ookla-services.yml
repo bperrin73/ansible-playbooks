@@ -2,7 +2,7 @@
  
   tasks:
     - name: Dump Date and Service Status
-      shell: date ; ps -ef |grep OoklaServer >> /tmp/asr.log
+      shell: date >> /tmp/asr.log ; ps -ef | grep OoklaServer >> /tmp/asr.log
 
     - name: Change to the OoklaServer working directory and stop service.
       shell: ./ooklaserver.sh stop 
@@ -18,4 +18,4 @@
         chdir: /opt/ookla/server
 
     - name: Echo Start to Log.
-      shell: echo "Ookla Service Started" >> /tmp/asr.log
+      shell: date >> /tmp/asr.log ; echo "Ookla Service Started" >> /tmp/asr.log
