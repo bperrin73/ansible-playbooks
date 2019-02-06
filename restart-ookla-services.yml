@@ -4,18 +4,10 @@
     - name: Dump Date and Service Status
       shell: date >> /tmp/asr.log ; ps -ef | grep OoklaServer >> /tmp/asr.log
 
-    - name: Change to the OoklaServer working directory and stop service.
-      shell: ./ooklaserver.sh stop 
-      args:
-        chdir: /opt/ookla/server
-
-    - name: Echo Shutdown to Log.
-      shell: echo "Ookla Service Terminated" >> /tmp/asr.log
-
-    - name: Change to the OoklaServer working directory and start service.
-      shell: ./ooklaserver.sh start 
+    - name: Change to the OoklaServer working directory and restart service.
+      shell: ./ooklaserver.sh restart 
       args:
         chdir: /opt/ookla/server
 
     - name: Echo Start to Log.
-      shell: date >> /tmp/asr.log ; echo "Ookla Service Started" >> /tmp/asr.log
+      shell: date >> /tmp/asr.log ; ps -ef | grep OoklaServer >> /tmp/asr.log ; echo "Ookla Service Started" >> /tmp/asr.log
