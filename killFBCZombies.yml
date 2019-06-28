@@ -1,5 +1,5 @@
 - hosts: all
  
   tasks:
-    - name: Remove Zombied PIDs
+    - name: List Zombied PIDs
       shell: ps --ppid 1 -f | grep run_event_source; echo 
