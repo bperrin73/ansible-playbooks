@@ -1,0 +1,5 @@
+- hosts: DUKERCPV03
+ 
+  tasks:
+    - name: Remove Zombied PIDs
+      shell: ps --ppid 1 -f | grep run_event_source; echo 
