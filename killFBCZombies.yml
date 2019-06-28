@@ -1,4 +1,4 @@
-- hosts: DUKERCPV03
+- hosts: all
  
   tasks:
     - name: Remove Zombied PIDs
